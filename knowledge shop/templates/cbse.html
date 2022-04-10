@@ -18,7 +18,11 @@
             <h6 class="card-text" style="color:#d00b0b;">STOCK: {{home.quant}}</h6>
             <h6 class="card-text" style="color:#b635f8;">PRICE: RS {{home.price}}</h6>
             <a href="/fibuy/{{home.id}}" class="btn btn-primary">BUY NOW</a>
-        </div>
+            <form action="/" method="POST">
+            <input type="text" value='{{home.id}}'>
+            <input type="submit" class="float-right btn btn-light border btn-sm" value="Add to cart"
+            </form>  
+            </div>
     </div>
     {% endfor %}
 

@@ -1,4 +1,6 @@
 from django.db import models
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.models import User
 
 
 class Contact(models.Model):
@@ -46,3 +48,8 @@ class Sell(models.Model):
 
     def __str__(self):
         return self.phone
+
+class CreateUserForm(UserCreationForm):
+    class Meta:
+        model = User
+        fields = ['username', 'email', 'password1', 'password2']
